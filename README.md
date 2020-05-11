@@ -2,7 +2,7 @@
 
 Bienvenidos al proyecto "Foro - Club de Programadores". 
 
-Esta es una iniciativa que tiene sus orogenes en un grupo de WhatsApp formado por múltiples programadores que dominal diferentes lenguajes y paradigmas tan diversos como sus nacionalidades.
+Esta es una iniciativa que tiene sus origenes en un grupo de WhatsApp formado por múltiples programadores que dominan diferentes lenguajes y paradigmas tan diversos como sus nacionalidades.
 
 Para poder utilizar este proyecto, debes tener los siguientes requisitos:
 
