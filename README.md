@@ -1,7 +1,14 @@
   # Problemas a resolver
   
- Boton Nueva discusión
+ Boton Nueva discusión 
+ https://drive.google.com/open?id=1-Z4t_VxdZsNFJmhL37Lc9AottLEulTjl
 
+video Proyecto
+https://drive.google.com/file/d/1hjF_H_dQrNXzzx3vXWecuUvgCr5oZFcu/view
+
+# Agradeciendo ante todo a https://github.com/thedevdojo
+repositorio 
+https://github.com/thedevdojo/chatter
 
 # foro
 
