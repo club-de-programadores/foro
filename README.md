@@ -1,5 +1,7 @@
 # foro
 
+primer problema a resolver https://drive.google.com/open?id=1W5xgFL3k59PqT3VBl_d9e771QHf0Hw77
+
 Bienvenidos al proyecto "Foro - Club de Programadores". 
 
 Esta es una iniciativa que tiene sus origenes en un grupo de WhatsApp formado por múltiples programadores que dominan diferentes lenguajes y paradigmas tan diversos como sus nacionalidades.
