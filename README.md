@@ -1,6 +1,10 @@
-# foro
+  # Problemas a resolver
+  
+  primer problema a resolver https://drive.google.com/open?id=1W5xgFL3k59PqT3VBl_d9e771QHf0Hw77
 
-primer problema a resolver https://drive.google.com/open?id=1W5xgFL3k59PqT3VBl_d9e771QHf0Hw77
+
+
+# foro
 
 Bienvenidos al proyecto "Foro - Club de Programadores". 
 
