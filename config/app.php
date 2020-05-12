@@ -169,6 +169,7 @@ return [
         /*
          * Application Service Providers...
          */
+        DevDojo\Chatter\ChatterServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
