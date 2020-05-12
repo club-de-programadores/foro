@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
+
 </head>
 <body>
     <div id="app">
@@ -64,7 +66,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
+                                </div>@yield('js')
                             </li>
                         @endguest
                     </ul>
@@ -75,6 +77,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+        
     </div>
 </body>
 </html>
