@@ -1,6 +1,6 @@
   # Problemas a resolver
   
-  Ningún problema por el momento, disfruta de la paz.
+ Boton Nueva discusión
 
 
 # foro
