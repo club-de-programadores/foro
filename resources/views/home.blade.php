@@ -18,6 +18,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>    @yield('js')
+
 </div>
 @endsection

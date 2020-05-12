@@ -7,8 +7,9 @@ return [
     | Forum Routes
     |--------------------------------------------------------------------------
     |
-    | Here you can specify the specific routes for the different sections of
-    | your forum.
+    |
+       Aquí puede especificar las rutas específicas para las diferentes secciones de
+      tu foro
     |
     */
 
@@ -174,7 +175,7 @@ return [
     */
 
     'security' => [
-        'limit_time_between_posts' => false, //
+        'limit_time_between_posts' => true, //
         'time_between_posts'       => 1, // In minutes
     ],
 
