@@ -33,9 +33,9 @@ return [
     */
 
     'titles' => [
-        'discussion'  => 'Discussion',
-        'discussions' => 'Discussions',
-        'category'    => 'Category',
+        'discussion'  => 'Discución',
+        'discussions' => 'Discuciones',
+        'category'    => 'Categoria',
     ],
 
    /*
@@ -151,10 +151,10 @@ return [
     */
 
     'alert_messages' => [
-        'success' => 'Well done!',
-        'info'    => 'Heads Up!',
-        'warning' => 'Wuh Oh!',
-        'danger'  => 'Oh Snap!',
+        'success' => 'Bien echo!',
+        'info'    => 'Aviso!',
+        'warning' => 'Cuidado!',
+        'danger'  => 'Que mal!',
     ],
 
     /*
@@ -175,7 +175,7 @@ return [
     */
 
     'security' => [
-        'limit_time_between_posts' => true, //
+        'limit_time_between_posts' => false, //
         'time_between_posts'       => 1, // In minutes
     ],
 

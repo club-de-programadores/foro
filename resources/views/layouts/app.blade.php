@@ -7,11 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('title', 'FORUMS CLUB PROGRAMADORES') }}</title>
     <!-- Scripts -->
-<<<<<<< HEAD
     <script src="{{ asset('js/app.js') }}"></script>
-=======
-    <script src="{{ asset('js/app.js') }}" ></script>
->>>>>>> 5eaf332dfb73f3a93c3c854d602cb2722a915311
     @yield('js')
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
