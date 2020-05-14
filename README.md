@@ -30,7 +30,7 @@ Para poder utilizar este proyecto, debes tener los siguientes requisitos:
 Si cumples con estos prerequisitos, entonces podrás instalar este proyecto.
 
 
-#Pasos para instalar este proyecto correctamente:
+# Pasos para instalar este proyecto correctamente:
 
 1. Descarga este proyecto o clónalo con este comando: 
 
