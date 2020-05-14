@@ -7,9 +7,8 @@ return [
     | Forum Routes
     |--------------------------------------------------------------------------
     |
-    |
-       Aquí puede especificar las rutas específicas para las diferentes secciones de
-      tu foro
+    | Here you can specify the specific routes for the different sections of
+    | your forum.
     |
     */
 
@@ -33,9 +32,9 @@ return [
     */
 
     'titles' => [
-        'discussion'  => 'Discución',
-        'discussions' => 'Discuciones',
-        'category'    => 'Categoria',
+        'discussion'  => 'Discussion',
+        'discussions' => 'Discussions',
+        'category'    => 'Category',
     ],
 
    /*
@@ -151,10 +150,10 @@ return [
     */
 
     'alert_messages' => [
-        'success' => 'Bien echo!',
-        'info'    => 'Aviso!',
-        'warning' => 'Cuidado!',
-        'danger'  => 'Que mal!',
+        'success' => 'Well done!',
+        'info'    => 'Heads Up!',
+        'warning' => 'Wuh Oh!',
+        'danger'  => 'Oh Snap!',
     ],
 
     /*
@@ -175,7 +174,7 @@ return [
     */
 
     'security' => [
-        'limit_time_between_posts' => false, //
+        'limit_time_between_posts' => true, //
         'time_between_posts'       => 1, // In minutes
     ],
 
