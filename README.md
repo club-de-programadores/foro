@@ -76,3 +76,36 @@ http://localhost:8000
 prueba el proyecto que debe funcionar.
 
 Un saludo y Dios les bendiga a todos. 
+
+
+
+# Instalación del backend python/django
+
+1. Debes tener instalados los requisitos para ejecutar django.
+
+::::Requisitos
+:::::::Python 3.8.0
+:::::::django 3.0.4
+
+1.1 ¿Cómo instalar django?
+Consulta este post: https://tutorial.djangogirls.org/es/python_installation/
+
+1.2 ¿Cómo instalar django?
+
+1.2.1 Abra un linea de comandos (CMD O BASH)
+
+1.2.2 ejecute el siguiente comando: pip install django 
+
+
+2. Ejecutar el proyecto
+
+2.1 Abra una linea de comandos (CMD O BASH) dentro de la carpeta backend_django (Al nivel del archivo manage.py)
+
+2.2.1 Luego, ejecute el comando: python manage.py runserver
+
+
+3. Abra el navegador de su preferencia y en la barra de direcciones url coloque lo siguiente: 127.0.0.1:8000
+
+
+4. Sí todo ha ido bien, verá un coete en su pantalla.
+
