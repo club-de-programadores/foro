@@ -32,9 +32,9 @@ return [
     */
 
     'titles' => [
-        'discussion'  => 'Discussion',
-        'discussions' => 'Discussions',
-        'category'    => 'Category',
+        'discussion'  => 'Discusión',
+        'discussions' => 'Discusiones',
+        'category'    => 'Categoria',
     ],
 
    /*
@@ -78,7 +78,7 @@ return [
 
     'yields' => [
         'head'   => 'css',
-        '© 2020 Club de programadores. All rights reserved.' => 'js',
+        'footer' => 'js',
     ],
 
     /*
@@ -150,10 +150,10 @@ return [
     */
 
     'alert_messages' => [
-        'success' => 'Well done!',
-        'info'    => 'Heads Up!',
-        'warning' => 'Wuh Oh!',
-        'danger'  => 'Oh Snap!',
+        'success' => '¡Bien hecho!',
+        'info'    => 'Aviso!',
+        'warning' => 'Alerta',
+        'danger'  => 'Ups, lo siento.',
     ],
 
     /*
@@ -174,7 +174,7 @@ return [
     */
 
     'security' => [
-        'limit_time_between_posts' => true, //
+        'limit_time_between_posts' => false, //
         'time_between_posts'       => 1, // In minutes
     ],
 
