@@ -107,7 +107,7 @@ También puedes visitar el sitio oficial de django :  https://docs.djangoproject
 
 
 ## nota importante: 
-Django y Laravel, por defecto se ejecutan en la dirección  127.0.0.1 :8000.  Si necesitas  ejecutar ambos servidores  de forma simultanea  deberás indicarle a django que tome  otro puerto para que no entre en conflico  con Laravel.  Para hacer, al omento de ejecutar el servidor de django  has este comando:  python manage.py runserver 127.0.0.1:8080 o  otro puerto que tengas disponible. 
+Django y Laravel, por defecto se ejecutan en la dirección  127.0.0.1 :8000.  Si necesitas  ejecutar ambos servidores  de forma simultanea  deberás indicarle a django que tome  otro puerto para que no entre en conflico  con Laravel.  Para hacerlo, al momento de ejecutar el servidor de django  has este comando:  python manage.py runserver 127.0.0.1:8080 o  otro puerto que tengas disponible. 
 
 
 3. Abra el navegador de su preferencia y en la barra de direcciones url coloque lo siguiente: 127.0.0.1:8000
