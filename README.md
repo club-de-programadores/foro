@@ -106,6 +106,15 @@ También puedes visitar el sitio oficial de django :  https://docs.djangoproject
 2.2.1 Luego, ejecute el comando: python manage.py runserver
 
 
+## nota importante: 
+Laravel trabaja con el mismo comando 'runserver', debes tener en cuanta con qué quieres trabajar, si django o con laravel.
+
+
+
+
+
+
+
 3. Abra el navegador de su preferencia y en la barra de direcciones url coloque lo siguiente: 127.0.0.1:8000
 
 
