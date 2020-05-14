@@ -96,6 +96,8 @@ Consulta este post: https://tutorial.djangogirls.org/es/python_installation/
 
 1.2.2 ejecute el siguiente comando: pip install django 
 
+También puedes visitar el sitio oficial de django :  https://docs.djangoproject.com/es/3.0/intro/install/
+
 
 2. Ejecutar el proyecto
 
