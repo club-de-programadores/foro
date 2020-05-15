@@ -22,7 +22,7 @@ class ChatterDiscussionController extends Controller
     public function index(Request $request)
     {
         $total = 10;
-        $offset = 1;
+        $offset = 0;
         if ($request->total) {
             $total = $request->total;
         }
