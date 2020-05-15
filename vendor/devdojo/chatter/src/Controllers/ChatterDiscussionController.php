@@ -23,11 +23,11 @@ class ChatterDiscussionController extends Controller
     {
         $total = 10;
         $offset = 0;
-        if ($request->total) {
-            $total = $request->total;
+        if ($request->$total) {
+            $total = $request->$total;
         }
-        if ($request->offset) {
-            $offset = $request->offset;
+        if ($request->$offset) {
+            $offset = $request->$offset;
         }
         $discussions = Models::discussion()->with('user')->with('post')->with('postsCount')->with('category')->orderBy('created_at', 'ASC')->take($total)->offset($offset)->get();
 
