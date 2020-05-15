@@ -78,7 +78,7 @@ return [
 
     'yields' => [
         'head'   => 'css',
-        '© 2020 Club de programadores. All rights reserved.' => 'js',
+        'footer' => 'js',
     ],
 
     /*
