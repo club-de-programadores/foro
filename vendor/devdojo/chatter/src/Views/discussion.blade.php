@@ -161,6 +161,7 @@
 						</div><!-- #new_discussion -->
 						<div id="discussion_response_email">
 							<button id="submit_response" class="btn btn-success pull-right"><i class="chatter-new"></i> Submit Response</button>
+			
 							@if(Config::get('chatter.email.enabled'))
 								<div id="notify_email">
 									<img src="/vendor/devdojo/chatter/assets/images/email.gif" class="chatter_email_loader">
