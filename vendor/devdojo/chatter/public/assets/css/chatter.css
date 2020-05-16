@@ -32,9 +32,9 @@ body {
   outline: none;
 }
 #chatter #chatter_hero {
-  background-image: url('../images/hero_bg.jpg');
+  background-image: url('../images/hero_bg.png');
   width: 100%;
-  min-height: 150px;
+  min-height: 250px;
   position: relative;
   background-size: cover;
   background-position: center center;

@@ -45,6 +45,7 @@ Route::group([
         'middleware' => $middleware('category.show'),
     ]);
 
+
     /*
      * Auth routes.
      */

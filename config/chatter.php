@@ -42,21 +42,21 @@ return [
     | The main headline and description of your forum
     |--------------------------------------------------------------------------
     |
-    | Your headline and your description will be shown on the homepage of your
-    | forum, unless you change the default theme.
+    | Su título y su descripción se mostrarán en la página de inicio de su
+    | foro, a menos que cambie el tema predeterminado.
     |
-    |   *headline*: This is the main headline on the forum homepage
+    |   * titular *: Este es el titular principal en la página principal del foro
     |
-    |   *description*: This is the main description that will show under the
-    |       headline on the forum homepage.
-    |   *headline_logo*: If this is set an image will be used on the forum home
-    |       instead of text. Specify the relative path to the image here.
+    |   * descripción *: Esta es la descripción principal que se mostrará debajo de
+    |       titular en la página de inicio del foro.
+    |   * headline_logo *: si está configurado, se usará una imagen en el foro
+    |       en lugar de texto Especifique la ruta relativa a la imagen aquí.
     |
     */
 
-    'headline'      => 'Welcome to Chatter',
-    'description'   => 'A simple forum package for your Laravel app.',
-    'headline_logo' => '/vendor/devdojo/chatter/assets/images/logo-light.png',
+    'headline'      => '',
+    'description'   => '',
+    //'logito' =>        '/vendor/devdojo/chatter/assets/images/logo-prueba.png',
 
     /*
     |--------------------------------------------------------------------------

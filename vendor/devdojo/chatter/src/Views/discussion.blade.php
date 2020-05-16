@@ -13,7 +13,7 @@
 	<div id="chatter_header" style="background-color:{{ $discussion->color }}">
 		<div class="container">
 			<a class="back_btn" href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-back"></i></a>
-			<h1>{{ $discussion->title }}</h1><span class="chatter_head_details">Posted In {{ Config::get('chatter.titles.category') }}<a class="chatter_cat" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.category') }}/{{ $discussion->category->slug }}" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</a></span>
+			<h1>{{ $discussion->title }}</h1><span class="chatter_head_details">Posteado en la {{ Config::get('chatter.titles.category') }}<a class="chatter_cat" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.category') }}/{{ $discussion->category->slug }}" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</a></span>
 		</div>
 	</div>
 
@@ -39,14 +39,14 @@
 		        </ul>
 		    </div>
 	    </div>
-	@endif	
+	@endif
 
 	<div class="container margin-top">
-		
+
 	    <div class="row">
 
 	        <div class="col-md-12">
-					
+
 				<div class="conversation">
 	                <ul class="discussions no-bg" style="display:block;">
 	                	@foreach($posts as $post)
@@ -69,9 +69,9 @@
 			                		@endif
 			                		<div class="chatter_avatar">
 					        			@if(Config::get('chatter.user.avatar_image_database_field'))
-					        				
+
 					        				<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
-					        				
+
 					        				<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
 					        				@if( (substr($post->user->{$db_field}, 0, 7) == 'http://') || (substr($post->user->{$db_field}, 0, 8) == 'https://') )
 					        					<img src="{{ $post->user->{$db_field}  }}">
@@ -89,7 +89,7 @@
 					        		<div class="chatter_middle">
 					        			<span class="chatter_middle_details"><a href="{{ \DevDojo\Chatter\Helpers\ChatterHelper::userLink($post->user) }}">{{ ucfirst($post->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</a> <span class="ago chatter_middle_details">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($post->created_at))->diffForHumans() }}</span></span>
 					        			<div class="chatter_body">
-					        			
+
 					        				@if($post->markdown)
 					        					<pre class="chatter_body_md">{{ $post->body }}</pre>
 					        					<?= \DevDojo\Chatter\Helpers\ChatterHelper::demoteHtmlHeaderTags( GrahamCampbell\Markdown\Facades\Markdown::convertToHtml( $post->body ) ); ?>
@@ -97,7 +97,7 @@
 					        				@else
 					        					<?= $post->body; ?>
 					        				@endif
-					        				
+
 					        			</div>
 					        		</div>
 
@@ -106,7 +106,7 @@
 		                	</li>
 	                	@endforeach
 
-	           
+
 	                </ul>
 	            </div>
 
@@ -120,7 +120,7 @@
 		        			@if(Config::get('chatter.user.avatar_image_database_field'))
 
 		        				<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
-					        				
+
 		        				<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
 		        				@if( (substr(Auth::user()->{$db_field}, 0, 7) == 'http://') || (substr(Auth::user()->{$db_field}, 0, 8) == 'https://') )
 		        					<img src="{{ Auth::user()->{$db_field}  }}">
@@ -136,7 +136,7 @@
 		        		</div>
 
 			            <div id="new_discussion">
-			        	
+
 
 					    	<div class="chatter_loader dark" id="new_discussion_loader">
 							    <div></div>
@@ -161,7 +161,7 @@
 						</div><!-- #new_discussion -->
 						<div id="discussion_response_email">
 							<button id="submit_response" class="btn btn-success pull-right"><i class="chatter-new"></i> Submit Response</button>
-			
+
 							@if(Config::get('chatter.email.enabled'))
 								<div id="notify_email">
 									<img src="/vendor/devdojo/chatter/assets/images/email.gif" class="chatter_email_loader">
@@ -180,8 +180,8 @@
 
 				@else
 
-					<div id="login_or_register">
-						<p>Please <a href="/{{ Config::get('chatter.routes.home') }}/login">login</a> or <a href="/{{ Config::get('chatter.routes.home') }}/register">register</a> to leave a response.</p>
+					<div id="login_or_register" class="alert alert-danger" role="alert">
+						<p>Por favor <a href="/{{ Config::get('chatter.routes.home') }}/login">Inicia sesión</a> o <a href="/{{ Config::get('chatter.routes.home') }}/register">registater</a> para poder responder.</p>
 					</div>
 
 				@endif
@@ -244,13 +244,13 @@
 			}
 
 			details = container.find('.chatter_middle_details');
-			
+
 			// dynamically create a new text area
 			container.prepend('<textarea id="post-edit-' + id + '"></textarea>');
             // Client side XSS fix
             $("#post-edit-"+id).text(body.html());
 			container.append('<div class="chatter_update_actions"><button class="btn btn-success pull-right update_chatter_edit"  data-id="' + id + '" data-markdown="' + markdown + '"><i class="chatter-check"></i> Update Response</button><button href="/" class="btn btn-default pull-right cancel_chatter_edit" data-id="' + id + '"  data-markdown="' + markdown + '">Cancel</button></div>');
-			
+
 			// create new editor from text area
 			if(markdown){
 				simplemdeEditors['post-edit-' + id] = newSimpleMde(document.getElementById('post-edit-' + id));
@@ -272,7 +272,7 @@
 				$(e.target).parents('li').find('.editor-preview-side').remove();
 				$(e.target).parents('li').find('.CodeMirror').remove();
 			}
-			
+
 			$('#post-edit-' + post_id).remove();
 			parent_actions.remove();
 

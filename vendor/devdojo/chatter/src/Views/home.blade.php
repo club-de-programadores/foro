@@ -1,8 +1,11 @@
 @extends(Config::get('chatter.master_file_extend'))
-
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Last-Modified" content="0">
+<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+<meta http-equiv="Pragma" content="no-cache">
 @section(Config::get('chatter.yields.head'))
     <link href="/vendor/devdojo/chatter/assets/vendor/spectrum/spectrum.css" rel="stylesheet">
-	<link href="/vendor/devdojo/chatter/assets/css/chatter.css" rel="stylesheet">
+	<link href="/vendor/devdojo/chatter/assets/css/chatter.css?1.2" media="all" rel="stylesheet">
 	@if($chatter_editor == 'simplemde')
 		<link href="/vendor/devdojo/chatter/assets/css/simplemde.min.css" rel="stylesheet">
 	@endif
@@ -13,14 +16,11 @@
 <div id="chatter" class="chatter_home">
 
 	<div id="chatter_hero">
-		<div id="chatter_hero_dimmer"></div>
-		<?php $headline_logo = Config::get('chatter.headline_logo'); ?>
-		@if( isset( $headline_logo ) && !empty( $headline_logo ) )
-			<img src="{{ Config::get('chatter.headline_logo') }}">
-		@else
-			<h1>{{ Config::get('chatter.headline') }}</h1>
+        <div id="chatter_hero_dimmer"></div>
+        <br>
+     <img src="{{ Config::get('chatter.logito') }}">
+			<h1><strong>{{ Config::get('chatter.headline') }}</strong></h1>
 			<p>{{ Config::get('chatter.description') }}</p>
-		@endif
 	</div>
 
 	@if(Session::has('chatter_alert'))
@@ -45,17 +45,29 @@
 		        </ul>
 		    </div>
 	    </div>
-	@endif
+    @endif
+    <!-- buscador -->
+    <form class="form-inline" style="margin-left: 15px;" >
 
+  <input style="background-color: #a5a5a5;
+        border-radius: 4px;" name="slug" id="slug" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+
+           <button style="border: 4px;
+           border-radius: 30px;
+           border-color: azure;
+
+" class="btn btn-outline-success my-2 my-sm-0 " type="submit">Buscar</button>
+      </form>
+       <!-- fin del buscador -->
 	<div class="container chatter_container">
-		
+
 	    <div class="row">
 
 	    	<div class="col-md-3 left-column">
 	    		<!-- SIDEBAR -->
 	    		<div class="chatter_sidebar">
-					<button class="btn btn-primary" id="new_discussion_btn"><i class="chatter-new"></i> New {{ Config::get('chatter.titles.discussion') }}</button> 
-					<a href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-bubble"></i> All {{ Config::get('chatter.titles.discussions') }}</a>
+					<button class="btn btn-primary" id="new_discussion_btn"><i class="chatter-new"></i> Nueva {{ Config::get('chatter.titles.discussion') }}</button>
+					<a href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-bubble"></i> Todas las {{ Config::get('chatter.titles.discussions') }}</a>
 					<ul class="nav nav-pills nav-stacked">
 						<?php $categories = DevDojo\Chatter\Models\Models::category()->all(); ?>
 						@foreach($categories as $category)
@@ -70,31 +82,32 @@
 		        	<ul class="discussions">
 		        		@foreach($discussions as $discussion)
 				        	<li>
+                                <div>  </div>
 				        		<a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">
 					        		<div class="chatter_avatar">
 					        			@if(Config::get('chatter.user.avatar_image_database_field'))
-					        				
+
 					        				<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
-					        				
+
 					        				<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
 					        				@if( (substr($discussion->user->{$db_field}, 0, 7) == 'http://') || (substr($discussion->user->{$db_field}, 0, 8) == 'https://') )
 					        					<img src="{{ $discussion->user->{$db_field}  }}">
 					        				@else
 					        					<img src="{{ Config::get('chatter.user.relative_url_to_image_assets') . $discussion->user->{$db_field}  }}">
 					        				@endif
-					        			
+
 					        			@else
-					        				
+
 					        				<span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode($discussion->user->email) ?>">
 					        					{{ strtoupper(substr($discussion->user->email, 0, 1)) }}
 					        				</span>
-					        				
+
 					        			@endif
 					        		</div>
 
 					        		<div class="chatter_middle">
 					        			<h3 class="chatter_middle_title">{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
-					        			<span class="chatter_middle_details">Posted By: <span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
+					        			<span class="chatter_middle_details">Posteado por: <span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
 					        			@if($discussion->post[0]->markdown)
 					        				<?php $discussion_body = GrahamCampbell\Markdown\Facades\Markdown::convertToHtml( $discussion->post[0]->body ); ?>
 					        			@else
@@ -104,7 +117,7 @@
 					        		</div>
 
 					        		<div class="chatter_right">
-					        			
+
 					        			<div class="chatter_count"><i class="chatter-bubble"></i> {{ $discussion->postsCount[0]->total }}</div>
 					        		</div>
 
@@ -124,7 +137,7 @@
 	</div>
 
 	<div id="new_discussion">
-	        	
+
 
     	<div class="chatter_loader dark" id="new_discussion_loader">
 		    <div></div>
@@ -153,7 +166,7 @@
 
 		        <div class="col-md-1">
 		        	<i class="chatter-close"></i>
-		        </div>	
+		        </div>
 	        </div><!-- .row -->
 
             <!-- BODY -->

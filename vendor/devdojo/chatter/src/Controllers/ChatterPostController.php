@@ -23,6 +23,8 @@ class ChatterPostController extends Controller
      */
     public function index(Request $request)
     {
+        
+
         $total = 10;
         $offset = 0;
         if ($request->total) {
@@ -172,7 +174,7 @@ class ChatterPostController extends Controller
                 'chatter_alert_type' => 'success',
                 'chatter_alert'      => 'Successfully updated the '.config('chatter.titles.discussion').'.',
                 ];
- 
+
             return redirect('/'.config('chatter.routes.home').'/'.config('chatter.routes.discussion').'/'.$category->slug.'/'.$discussion->slug)->with($chatter_alert);
         } else {
             $chatter_alert = [

@@ -21,6 +21,8 @@ class ChatterDiscussionController extends Controller
      */
     public function index(Request $request)
     {
+
+
         $total = 10;
         $offset = 0;
         if ($request->total) {
@@ -88,6 +90,9 @@ class ChatterDiscussionController extends Controller
 
         // *** Let's gaurantee that we always have a generic slug *** //
         $slug = str_slug($request->title, '-');
+
+
+
 
         $discussion_exists = Models::discussion()->where('slug', '=', $slug)->first();
         $incrementer = 1;
@@ -168,8 +173,8 @@ class ChatterDiscussionController extends Controller
 
         return false;
     }
- 
-    /** 
+
+    /**
      * Display the specified resource.
      *
      * @param int $id
@@ -285,4 +290,8 @@ class ChatterDiscussionController extends Controller
             return response()->json(1);
         }
     }
+
+
+
+
 }

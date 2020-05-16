@@ -41,4 +41,7 @@ class Discussion extends Model
     {
         return $this->belongsToMany(config('chatter.user.namespace'), 'chatter_user_discussion', 'discussion_id', 'user_id');
     }
+
+
+
 }
