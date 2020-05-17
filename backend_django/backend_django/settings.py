@@ -78,10 +78,19 @@ WSGI_APPLICATION = 'backend_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'foro',
+        'USER': 'postgres',
+        'PASSWORD': 'shainny',
+        'HOST': '127.0.0.1',
+        'DATABASE_PORT': '5432', 
     }
 }
+
+# database = NAME
+# user = USER
+# password = PASSWORD
+# default-character-set = utf8
 
 
 # Password validation
