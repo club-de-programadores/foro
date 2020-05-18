@@ -1,12 +1,9 @@
   # Problemas a resolver
-  
- Boton Nueva discusión 
- https://drive.google.com/open?id=1-Z4t_VxdZsNFJmhL37Lc9AottLEulTjl
+ 
+no hay jajajaaj
 
-video Proyecto
-https://drive.google.com/file/d/1hjF_H_dQrNXzzx3vXWecuUvgCr5oZFcu/view
 
-# Agradeciendo ante todo a https://github.com/thedevdojo
+## Agradeciendo ante todo a https://github.com/thedevdojo
 repositorio 
 https://github.com/thedevdojo/chatter
 
@@ -16,39 +13,44 @@ Bienvenidos al proyecto "Foro - Club de Programadores".
 
 Esta es una iniciativa que tiene sus origenes en un grupo de WhatsApp formado por múltiples programadores que dominan diferentes lenguajes y paradigmas tan diversos como sus nacionalidades.
 
+## Laravel 
+
 Para poder utilizar este proyecto, debes tener los siguientes requisitos:
 
-1) debes tener la versión de PHP mayor o igual a la 7.2.5. 
+1. Debes tener la versión de PHP 7.2.5 o superior. 
 
-para mas información visita la documentación oficial de Laravel: https://laravel.com/docs/7.x
-
-
-2) debes tener instalado composer en tu equipo: https://getcomposer.org/
+### Para más información visita la documentación oficial de Laravel: https://laravel.com/docs/7.x
 
 
-3) si utilizas windows, puedes descargar el programa git desde la página oficial: https://gitforwindows.org/
+2. Debes tener instalado composer en tu equipo: https://getcomposer.org/
+
+
+3. Si utilizas windows, puedes descargar el programa git desde la página oficial: https://gitforwindows.org/
 
 Si cumples con estos prerequisitos, entonces podrás instalar este proyecto.
 
-Pasos para instalar este proyecto correctamente:
 
-1) descarga este proyecto o clónalo con el comando: 
+# Pasos para instalar este proyecto correctamente:
 
-git clone git://github.com/schacon/grit.git
+1. Descarga este proyecto o clónalo con este comando: 
 
-2) ejecutar el comando: 
+git clone https://github.com/club-de-programadores/foro.git
 
-composer install
+2. Ejecutar linea por linea 
 
-3) copiar el archivo ".env.example" y pegarlo con el nombre: ".env". Si estas con el sistema gitforwindows, o en linux o mac, puedes ejecutar el siguiente comando: 
+* php artisan vendor:publish --tag=chatter_assets --force
 
-cp .env.example .env
+* php artisan vendor:publish --tag=chatter_config --force
 
-4) debemos generar una nueva llave de laravel con el siguiente comando:
+* php artisan vendor:publish --tag=chatter_migrations --force
 
-php artisan key:generate
 
-5) Configura la nueva base de datos modificando el archivo ".env":
+3. Debemos generar una nueva llave de laravel con el siguiente comando:
+
+* php artisan key:generate
+
+
+4. Configura la nueva base de datos modificando el archivo ".env": aunque por defecto ya viene prescrita
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -57,26 +59,21 @@ DB_DATABASE=foro
 DB_USERNAME=root
 DB_PASSWORD=
 
-6)
-este comando es para hacer la migración de las tablas  
- ejecuta php artisan migrate
+5. Este comando es para hacer la migración de las tablas  
 
-7) 
-npm son las siglas de node package manager y básicamente es el manejador de paquetes de JavaScript, así como lo es Composer para PHP, es decir, nos permite instalar paquetes que se ejecutan del lado del cliente (frontend).
+* php artisan migrate
 
- ejecuta npm install && npm run dev
+6. npm son las siglas de node package manager y básicamente es el manejador de paquetes de JavaScript, así como lo es Composer para PHP, es decir, nos permite instalar paquetes que se ejecutan del lado del cliente (frontend).
 
-8)
-Si tiene PHP instalado localmente y desea utilizar el servidor de desarrollo incorporado de PHP para servir su aplicación, puede usar el  php artisan serve. Este comando iniciará un servidor de desarrollo en :
-http://localhost:8000
+* npm install && npm run dev
 
- ejecuta php artisan serve .
+7. Si tiene PHP instalado localmente y desea utilizar el servidor de desarrollo incorporado de PHP para servir su aplicación, puede usar el php artisan serve. Este comando iniciará un servidor de desarrollo en:
 
+http://localhost:8000/forums
 
-prueba el proyecto que debe funcionar.
+ * php artisan serve 
 
-Un saludo y Dios les bendiga a todos. 
-
+### Una vez realizado todo lo anterior, el proyecto estará listo para su uso.
 
 
 # Instalación del backend python/django
@@ -114,4 +111,3 @@ Django y Laravel, por defecto se ejecutan en la dirección  127.0.0.1 :8000.  Si
 
 
 4. Sí todo ha ido bien, verá un coete en su pantalla.
-

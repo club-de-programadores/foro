@@ -19,10 +19,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-text-white bg-secondary">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('title', 'FORUMS CLUB PROGRAMADORES') }}
+
+                <a class="navbar-brand " href="{{ url('/') }}">
+                    <div style="color: white" class="btn btn-outline-primary"><strong>{{ config('title', 'FORUMS CLUB PROGRAMADORES') }}</strong></div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -31,19 +32,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
-
+                    <nav class="navbar navbar-light float-right">
+            
+                      </nav>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a style="margin-right: 5px" class="nav-link btn btn-outline-dark" href="{{ route('login') }}">{{ __('Inicia sesión') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link btn btn-outline-dark" href="{{ route('register') }}">{{ __('Registrate') }}</a>
                                 </li>
                             @endif
                         @else
