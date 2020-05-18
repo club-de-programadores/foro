@@ -9,7 +9,7 @@ from django.views.generic import UpdateView
 
 def index(request):
     profile = User.objects.all()
-    return render(request, "index.html", {'profile': profile})
+    return render(request, "main.html", {'profile': profile})
 
 
 class miembroEditar(UpdateView):
