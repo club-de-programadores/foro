@@ -34,7 +34,7 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
                     <nav class="navbar navbar-light float-right">
-            
+
                       </nav>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -64,6 +64,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                                    <div> <a href="http://127.0.0.1/test/">Editar perfil</a> </div>
                                 </div>
                             </li>
                         @endguest
