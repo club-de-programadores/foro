@@ -28,19 +28,6 @@ def save_form(request):
     else:
         form = manager_form()
 
-
-
-def user_modific2(request):
-	if request.method == 'POST':
-		form = manager_form(request.POST)
-		if form.is_valid():
-			form.save()
-			return redirect('/listo/')
-	else:
-		form = manager_form()
-	return render(request, "register.html", {'form': form})
-
-
 def user_modific(request):
     user = User.objects.get(id = 2)
     if request.method == 'GET':
@@ -50,6 +37,10 @@ def user_modific(request):
         if form.is_valid():
             form.save()
         return redirect('/listo/')
-
     return render(request, "register.html", {'form': form})
+
+
+def test(request):
+    n = chatter_categories.objects.all()
+    return render(request, 'test.html', {'n': n})
 

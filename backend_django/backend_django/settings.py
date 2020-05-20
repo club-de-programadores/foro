@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Usuarios',
+    'gestor_db',
 ]
 
 AUTH_USER_MODEL = 'Usuarios.User'
@@ -78,6 +79,7 @@ WSGI_APPLICATION = 'backend_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+<<<<<<< HEAD
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -87,6 +89,16 @@ DATABASES = {
             'HOST': 'localhost',
             'PORT': '3306',
         }
+=======
+DATABASES = { #postgresql_psycopg2
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'foro',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '', 
+>>>>>>> ef6813c9016a9219aedd8f21f02673b691385a2f
     }
 # database = NAME
 # user = USER
