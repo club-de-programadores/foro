@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/forums');
 });
+Route::resource('contacto', 'ContactosController')->names('contacto');
 Route::get('contacto', 'ContactosController@index')->name('contacto');
 Route::get('equipo', 'EquipoController@index')->name('equipo');
 Auth::routes();

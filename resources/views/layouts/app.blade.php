@@ -343,7 +343,7 @@ El mundo atraviesa momentos difíciles. <br> Y para enfrentarlos, nada mejor que
 	    ·
         <a href="{{Url('equipo')}}">Nuestro equipo</a>
 	·
-		<a href="#">Contact</a>
+		<a href="{{Url('contacto')}}">Contactos</a>
 		</p>
 
 		<p class="footer-company-name">Club de programadores &copy; 2020</p>

@@ -23,13 +23,26 @@ text-align: center;
 
 }
 input{
-    border-radius: 25px;
+    border-radius: 25px ;
+    border-style: solid;
+  border-color: black;
+    text-align: center;
+
 
 }
 textarea{
-    border-radius: 25px;
+    border-radius: 10px;
+    width: 500px;
+    border-style: solid;
+  border-color: black;
 
+}
+.container{
+  justify-content: center;
+}
+.margin{
 
+    margin: 5px;
 }
   </style>
   <title>Contactos</title>
@@ -41,22 +54,37 @@ textarea{
     <i class="fa fa-whatsapp"></i>
     <a href="https://chat.whatsapp.com/JqmKhNypRY0EllgYo6YHM5">WhatsApp</a>
 
-</div>
 
 <br>
-<div>
     <i class="fa fa-envelope"></i>
     <p><a href="mailto:cub.de.programadores@gmail.com">cub.de.programadores@gmail.com</a></p>
     </div>
-    <br>
-<label for="correo">Correo Electronico</label>
-<input id="email" name="email" placeholder="Correo" type="text">
 <br>
-<label for="Nombre">Nombre</label>
+
+<form action="{{ route('contacto.store') }}" method="POST">
+        @csrf
+            <div class="container" >
+    <div style="float: right" >
+
+             <label for="correo">Correo Electronico</label>
+<input  id="email" name="email" placeholder="Correo" type="text">
+<br>
+    </div>
+<div style="float: left" >
+    <label for="Nombre">Nombre</label>
 <input id="name" name="name" placeholder="Nombre" type="text">
-<br>
-<textarea name="textarea" id="textarea"  cols="30" rows="10"></textarea>
-<button type="submit" value="Enviar" class="btn btn-success" >Enviar</button>
+<br></div>
+
+            </div>
+            <div style="float: none" ><textarea class="" name="comentario" id="comentario" placeholder="Tu mensaje" cols="30" rows="10"></textarea>
+</div>
+<div class="margin">
+    <button style="float:right " type="submit" value="Enviar" class="btn btn-success" >Enviar</button>
+</div>
+
+</form>
+
+
 </body>
 </html>
 
