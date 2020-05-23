@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -317,7 +317,7 @@ El mundo atraviesa momentos difíciles. <br> Y para enfrentarlos, nada mejor que
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                    <div> <a href="http://127.0.0.1/test/">Editar perfil</a> </div>
+                                <div> <a href="{{URL('Edit')}}">Editar perfil</a> </div>
                                 </div>
                             </li>
                         @endguest
