@@ -66,7 +66,11 @@
 	    	<div class="col-md-3 left-column">
 	    		<!-- SIDEBAR -->
 	    		<div class="chatter_sidebar">
-					<button class="btn btn-primary" id="new_discussion_btn"><i class="chatter-new"></i> Nueva {{ Config::get('chatter.titles.discussion') }}</button>
+					<button class="btn btn-info"  style="border: 2px solid #000000;
+                    color: #000000;
+                    &:hover, &:active, &:focus{
+                        outline:none;
+                    }" id="new_discussion_btn"><i class="chatter-new"></i> Nueva {{ Config::get('chatter.titles.discussion') }}</button>
 					<a href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-bubble"></i> Todas las {{ Config::get('chatter.titles.discussions') }}</a>
 					<ul class="nav nav-pills nav-stacked">
 						<?php $categories = DevDojo\Chatter\Models\Models::category()->all(); ?>
